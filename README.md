@@ -2,23 +2,40 @@
 
 ![This is an image](https://www.fancourier.ro/wp-content/themes/fancourier/images/logo.png)
 
-To automate the generation of FAN Courier shipping labels, we put at your disposal the [SelfAWB](https://www.selfawb.ro/new/login) API that can be integrated into your website or custom application.
+This repository contains the FAN Courier SelfAWB API documentation, CSV templates, and example materials needed to integrate label generation, shipping workflows, and locker-based deliveries.
 
-Using this solution you can: calculate the transport cost, generate shipping labels (AWB), print the AWB, track the delivery status and more. 
+## What is included
 
-You can use the data below for testing only:
-> - ClientID : 7032158
-> - Username : clienttest
-> - Password : testing
+The original documentation was shipped as ZIP archives. The contents have been extracted into the `docs/` folder so the files are directly browsable and usable.
 
-This is a public test account that can be uset to test the API or to access the SelfAWB application.
+- `docs/EN/` — English documentation, CSV templates, and integration examples
+- `docs/RO/` — Romanian documentation, CSV templates, and integration examples
+- `EN.zip` and `RO.zip` — original packaged archives retained for reference
 
-Regarding the general workflow for API integration, this is:
-> 1. **AWB generation** using the **import_awb_integrat.php** script and the csv file **model_awb.csv** file
-> 2. **AWB printing** using **view_awb_integrat_pdf.php**
-> 3. Create the **pick-up order** using the script **comanda_curier_integrat.php**
-> 4. **tarif.php** can be used to **calculate the transport cost**.
+## Quick start
 
-Inside the archives you will find the **API documentation** and the **csv files** necessary for the generation of shipments, as well as for the generation of **FANbox** type shipments (**lockers**).
+1. Open the relevant folder under `docs/`.
+2. Review the PDF documentation under `Integration documentation` or `API FAN Courier + FANbox`.
+3. Use the CSV examples from the `Csv files` / `Fisiere csv` folders as templates for your AWB payloads.
+4. Refer to the sample scripts under `Scripts examples/` for implementation examples.
 
-**For any inquiries do not hesitate to contact us at _asistenta.it@fancourier.ro_ .** 
+## Testing credentials
+
+These are public test credentials for validation purposes only:
+
+- ClientID: 7032158
+- Username: clienttest
+- Password: testing
+
+## Integration workflow
+
+The standard workflow is:
+
+1. Generate an AWB using the integration script and CSV model file
+2. Print the AWB or generate the PDF output
+3. Create the pickup order for courier collection
+4. Calculate transport cost using the pricing endpoint or script
+
+## Contact
+
+For any inquiries, contact: _asistenta.it@fancourier.ro_
